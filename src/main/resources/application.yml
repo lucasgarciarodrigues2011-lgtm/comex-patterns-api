@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: comex-patterns-api
+  datasource:
+    url: jdbc:h2:mem:comex;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+
+comex:
+  ptax:
+    url-base: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata
